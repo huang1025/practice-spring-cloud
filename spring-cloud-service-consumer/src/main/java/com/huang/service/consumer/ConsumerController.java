@@ -17,7 +17,7 @@ public class ConsumerController {
 
     @RequestMapping(value = "consumerHello", method = RequestMethod.GET)
     public String consumerHello() {
-        String body = restTemplate.getForEntity("http://localhost:8080/hello", String.class).getBody();
+        String body = restTemplate.getForEntity("http://service-hello:8080/hello", String.class).getBody();
         return "consumerHello(" + body + ")";
     }
 }
