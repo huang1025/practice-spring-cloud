@@ -22,6 +22,11 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
             <version>1.4.4.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.huang</groupId>
+            <artifactId>spring-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
