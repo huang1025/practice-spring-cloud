@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 5555
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+zuul:
+  routes:
+    api-consumer:
+      path: /api-consumer/**
+      serviceId: consumer-hello
+    api-provider:
+      path: /api-provider/**
+      serviceId: service-hello
