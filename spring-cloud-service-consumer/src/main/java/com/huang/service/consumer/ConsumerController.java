@@ -20,4 +20,10 @@ public class ConsumerController {
         String body = restTemplate.getForEntity("http://service-hello:8080/hello", String.class).getBody();
         return "consumerHello(" + body + ")";
     }
+
+    @RequestMapping(value = "consumerHelloForHystrix", method = RequestMethod.GET)
+    public String consumerHelloForHystrix() {
+        String body = restTemplate.getForEntity("http://service-hello/helloForHystrix", String.class).getBody();
+        return "consumerHelloForHystrix(" + body + ")";
+    }
 }

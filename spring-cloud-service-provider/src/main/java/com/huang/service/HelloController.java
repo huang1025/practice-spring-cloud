@@ -1,5 +1,6 @@
 package com.huang.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by huang_jiangling on 2018/4/14.
@@ -25,5 +27,18 @@ public class HelloController {
             System.out.println("service: " + each);
         }
         return "service provider of hello;";
+    }
+
+    @RequestMapping(value = "/helloForHystrix")
+    @HystrixCommand(fallbackMethod = "hehe")
+    public String helloForHystrix() throws InterruptedException {
+        int num = new Random().nextInt(5);
+        System.out.println(num);
+        Thread.currentThread().sleep(num * 1000);
+        return "service-providor:helloForHystrix";
+    }
+
+    public String hehe() {
+        return "hehe:error";
     }
 }
