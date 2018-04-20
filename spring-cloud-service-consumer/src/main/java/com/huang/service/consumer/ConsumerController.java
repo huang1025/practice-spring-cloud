@@ -15,6 +15,11 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @RequestMapping(value = "filter", method = RequestMethod.GET)
+    public String filter() {
+        return "consumer:filter";
+    }
+
     @RequestMapping(value = "consumerHello", method = RequestMethod.GET)
     public String consumerHello() {
         String body = restTemplate.getForEntity("http://service-hello:8080/hello", String.class).getBody();

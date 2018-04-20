@@ -9,11 +9,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
-zuul:
-  routes:
-    api-consumer:
-      path: /api-consumer/**
-      serviceId: consumer-hello
-    api-provider:
-      path: /api-provider/**
-      serviceId: service-hello
+
+#zuul:
+#  routes:
+#    consumer-hello: /api-consumer/**
+#    service-hello: /api-provider/**
