@@ -1,5 +1,6 @@
-package com.huang.service.consumer;
+package com.huang.service.consumer.controller;
 
+import com.huang.service.consumer.serviceOfCloud.ConsumerEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,6 @@ public class EmployeeController {
 
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String list() {
-        return "service-consumer->consumerEmployee/list:(" + employeeService.list() + ")";
+        return "serviceOfCloud-consumer->consumerEmployee/list:(" + employeeService.list() + ")";
     }
 }

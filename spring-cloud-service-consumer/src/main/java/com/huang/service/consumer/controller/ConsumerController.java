@@ -1,4 +1,4 @@
-package com.huang.service.consumer;
+package com.huang.service.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

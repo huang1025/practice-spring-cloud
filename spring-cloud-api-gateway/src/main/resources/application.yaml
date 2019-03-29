@@ -13,4 +13,4 @@ eureka:
 #zuul:
 #  routes:
 #    consumer-hello: /api-consumer/**
-#    service-hello: /api-provider/**
+#    serviceOfCloud-hello: /api-provider/**

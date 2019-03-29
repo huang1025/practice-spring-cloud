@@ -1,4 +1,4 @@
-package com.huang.service.consumer;
+package com.huang.service.consumer.serviceOfCloud;
 
 import com.huang.service.api.EmployeeService;
 import org.springframework.cloud.netflix.feign.FeignClient;

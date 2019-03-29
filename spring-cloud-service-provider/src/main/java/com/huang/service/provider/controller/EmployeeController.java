@@ -1,4 +1,4 @@
-package com.huang.service.provider;
+package com.huang.service.provider.controller;
 
 import com.huang.service.api.EmployeeService;
 import org.springframework.web.bind.annotation.RestController;

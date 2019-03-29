@@ -1,4 +1,4 @@
-package com.huang.service.provider;
+package com.huang.service.provider.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +24,9 @@ public class HelloController {
         List<String> services = discoveryClient.getServices();
         for (String each : services) {
             System.out.println("==============");
-            System.out.println("service: " + each);
+            System.out.println("serviceOfCloud: " + each);
         }
-        return "service provider of hello;";
+        return "serviceOfCloud provider of hello;";
     }
 
     @RequestMapping(value = "/helloForHystrix")
@@ -35,7 +35,7 @@ public class HelloController {
         int num = new Random().nextInt(5);
         System.out.println(num);
         Thread.currentThread().sleep(num * 1000);
-        return "service-providor:helloForHystrix";
+        return "serviceOfCloud-providor:helloForHystrix";
     }
 
     public String hehe() {
