@@ -11,7 +11,6 @@
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-service-b</module>
         <module>spring-cloud-service-a</module>
-        <module>spring-cloud-service-api</module>
         <module>spring-cloud-api-gateway</module>
     </modules>
     <packaging>pom</packaging>

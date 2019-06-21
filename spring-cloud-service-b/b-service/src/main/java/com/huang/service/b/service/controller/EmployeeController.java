@@ -1,13 +1,13 @@
 package com.huang.service.b.service.controller;
 
-import com.huang.service.api.EmployeeService;
+import com.huang.service.b.api.service.BEmployeeService;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by huang_jiangling on 2018/4/20.
  */
 @RestController
-public class EmployeeController implements EmployeeService {
+public class EmployeeController implements BEmployeeService {
 
     @Override
     public String list() {

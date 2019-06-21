@@ -12,8 +12,8 @@
     <artifactId>spring-cloud-service-a</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>a-service</module>
         <module>a-api</module>
+        <module>a-service</module>
     </modules>
 
     <dependencies>
@@ -31,11 +31,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
             <version>1.4.4.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.huang</groupId>
-            <artifactId>spring-cloud-service-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
