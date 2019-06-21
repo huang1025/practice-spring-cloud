@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class AppConfigForServiceConsumer {
+public class AppConfigForServiceA {
 
     @Bean
     @LoadBalanced
@@ -23,6 +23,6 @@ public class AppConfigForServiceConsumer {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(AppConfigForServiceConsumer.class, args);
+        SpringApplication.run(AppConfigForServiceA.class, args);
     }
 }
