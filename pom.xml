@@ -8,9 +8,9 @@
     <artifactId>practice-spring-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-cloud-eureka</module>
-        <module>spring-cloud-service-provider</module>
-        <module>spring-cloud-service-consumer</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-service-b</module>
+        <module>spring-cloud-service-a</module>
         <module>spring-cloud-service-api</module>
         <module>spring-cloud-api-gateway</module>
     </modules>
@@ -21,6 +21,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>1.5.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
