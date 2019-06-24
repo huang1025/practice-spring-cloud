@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by huang_jiangling on 2018/4/20.
  */
 @RestController
-@RequestMapping("consumerEmployee")
+@RequestMapping("a_employee")
 public class EmployeeController {
 
     @Autowired
@@ -18,6 +18,6 @@ public class EmployeeController {
 
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String list() {
-        return "serviceOfCloud-a->consumerEmployee/list:(" + employeeService.list() + ")";
+        return "service-a->consumer->service-b->Employee/list:(" + employeeService.list() + ")";
     }
 }
